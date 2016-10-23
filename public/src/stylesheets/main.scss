@@ -1,0 +1,56 @@
+@import 'skeleton-scss/scss/skeleton';
+@import 'variables/colors';
+@import 'https://fonts.googleapis.com/css?family=Anton|Source+Sans+Pro:200';
+
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background: #326978;
+    background: -moz-linear-gradient(-60deg, #326978 0%, #c8d5be 100%);
+    background: -webkit-linear-gradient(-60deg, #326978 0%,#c8d5be 100%);
+    background: linear-gradient(150deg, #326978 0%,#c8d5be 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #c8d5be;
+    color: #fff;
+    color: purple;
+    height: 100%;
+    margin: 0;
+}
+
+.leader {
+    height: 180px;
+    padding-top: 48px;
+    margin-bottom: 120px;
+
+    @media (min-width: 750px) {
+        height: 360px;
+        padding-top: 92px;
+    }
+
+    .title {
+        font-family: 'Anton', sans-serif;
+        text-transform: uppercase;
+    }
+
+    .intro {
+        font-size: 3.2rem;
+
+        @media (min-width: 750px) {
+            width: 50%;
+        }
+    }
+}
+
+a {
+    color: #00B7FF;
+}

@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>{{title}}</title>
-    <link rel='stylesheet' href='/dist/stylesheets/style.css' />
-  </head>
-  <body>
-    {{{body}}}
-  </body>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{{title}}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href='{{static 'dist/stylesheets/main.css'}}' rel='stylesheet' type="text/css">
+    </head>
+    <body>
+        {{{body}}}
+
+        <script src='{{static 'dist/javascripts/main.js'}}'></script>
+    </body>
 </html>
