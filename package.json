@@ -19,7 +19,9 @@
     "open:dev": "opener http://localhost:3000",
     "serve": "nodemon -w app.js -w routes/ -w views/",
     "livereload": "livereload public/dist/",
-    "dev": "npm run open:dev -s && parallelshell 'npm run livereload' 'npm run serve -s' 'npm run watch -s'"
+    "dev": "npm run open:dev -s && parallelshell 'npm run livereload' 'npm run serve -s' 'npm run watch -s'",
+    "lint": "jshint .",
+    "validate": "npm ls"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
@@ -43,7 +45,11 @@
     "nodemon": "^1.11.0",
     "opener": "^1.4.2",
     "parallelshell": "^2.0.0",
+    "precommit-hook": "^3.0.0",
     "rimraf": "^2.5.4",
     "skeleton-scss": "^2.0.4"
-  }
+  },
+  "pre-commit": [
+    "lint"
+  ]
 }
