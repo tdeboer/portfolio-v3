@@ -1,6 +1,13 @@
 var hbs = require('hbs');
 
-hbs.registerHelper('static', function(file) {
-  //return require('../../assets.json')[file];
-  return file;
-});
+function hbsHelpers(app) {
+  return hbs.registerHelper('static', function(file) {
+    if (app.get('env') === 'development') {
+      return file;
+    } else {
+      return require('../../assets.json')[file];
+    }
+  });
+}
+
+module.exports = hbsHelpers;
