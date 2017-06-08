@@ -32,7 +32,7 @@ router.post('/:deck/:file', function (req, res) {
   wstream.on('finish', function() {
     // save image to storage
     // write reference of slides to db
-    demoDeck.slides.push(`${deck}-${fileName}`); // TODO: no guarenteed order
+    demoDeck.slides.push(`store/${deck}-${fileName}`); // TODO: no guarenteed order
     res.send({
       deck: demoDeck.refId
     });
