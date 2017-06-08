@@ -28,7 +28,7 @@ router.post('/:deck/:file', function (req, res) {
   // Create deck document in db
   // Return check-in ID
 
-  var wstream = fs.createWriteStream(`store/${deck}-${fileName}`);
+  var wstream = fs.createWriteStream(`public/store/${deck}-${fileName}`);
   wstream.on('finish', function() {
     // save image to storage
     // write reference of slides to db
@@ -48,6 +48,7 @@ router.post('/:deck/:file', function (req, res) {
 });
 
 router.post('/:deck/slide/current', function (req, res) {
+  console.log(req.body.current);
   demoDeck.current = req.body.current;
   res.send({
     deck: demoDeck.refId
