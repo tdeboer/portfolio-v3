@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "npm run build && node ./bin/www",
     "clean": "rimraf public/dist/ && mkdir public/dist",
     "prebuild": "npm run clean -s",
     "build": "npm run build:scripts -s && npm run build:styles --output-style compressed --source-map true && npm run hash",
